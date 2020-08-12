@@ -21,7 +21,10 @@ constexpr size_t N = 3;
 //============================================================================
 
 /// @brief	saves numbers from user input in an array for later use
-/// @param	array<int, N> &numbers: pointer to array to store N numbers
+///
+/// @param	&numbers array<int, N> pointer to array to store N numbers
+///
+///
 void getNumUser(array<int, N> &numbers) {
 	for (long unsigned int i {0}; i < numbers.size(); ++i) {		// changed int to long unsigned int to avoid overflow with big arrays
 		cout << "Nummer " << (i + 1) << ": ";
@@ -34,7 +37,10 @@ void getNumUser(array<int, N> &numbers) {
 //============================================================================
 
 /// @brief	uses user inputed numbers from array and checks if modulo 2 returns 0
-/// @param	array<int, N> &numbers: pointer to array to read N numbers
+///
+/// @param	&numbers array<int, N> pointer to array to read N numbers
+///
+///
 void printAbs(array<int, N> &numbers) {
 	for (auto n:numbers) {							// for every item in numbers put into n
 		if (n % 2 == 0)	cout << n << "\n";				// calculate the modulo (check if number is even)
@@ -46,8 +52,11 @@ void printAbs(array<int, N> &numbers) {
 //============================================================================
 
 /// @brief	generates some random numbers and writes them to a file
+///
 /// @param	string filename: writes to the filename
-/// @param	int count: how many random numbers to write
+/// @param	count int how many random numbers to write
+///
+///
 void writeDummyNumbers (string filename, int count) {
 
 	// open file to write some random numbers in it
@@ -68,7 +77,10 @@ void writeDummyNumbers (string filename, int count) {
 }
 
 /// @brief	saves numbers from user input in an array into a file
-/// @param	array<int, N> &numbers: pointer to array to store N numbers
+///
+/// @param	&numbers array<int, N> pointer to array to store N numbers
+///
+///
 void getNumFile(array<int, N> &numbers) {
 
 	// Input Filename to read numbers from
@@ -103,7 +115,10 @@ void getNumFile(array<int, N> &numbers) {
 //============================================================================
 
 /// @brief	uses user inputed numbers from array and checks if modulo 2 returns 0
-/// @param	array<int, N> &numbers: pointer to array to read N numbers
+///
+/// @param	&numbers array<int, N> pointer to array to read N numbers
+///
+///
 void writeAbsFile(array<int, N> &numbers) {
 
 	// Input Filename to write numbers to
@@ -130,7 +145,10 @@ void writeAbsFile(array<int, N> &numbers) {
 //============================================================================
 
 /// @brief	saves numbers from user input in an array for later use
-/// @param	array<int, N> &numbers: pointer to array to store N numbers
+///
+/// @param	&numbers array<int, N> pointer to array to store N numbers
+///
+///
 void getNumUser_vector(vector<int> &numbers) {
 	int i {0};
 	int input;
@@ -154,7 +172,10 @@ void getNumUser_vector(vector<int> &numbers) {
 //============================================================================
 
 /// @brief	uses user inputed numbers from array and checks if modulo 2 returns 0
-/// @param	vector<int> &numbers: pointer to array to read numbers
+///
+/// @param	&numbers vector<int> pointer to array to read numbers
+///
+///
 void printAbs_vector(vector<int> &numbers) {
 	for (auto n:numbers) {							// for every item in numbers put into n
 		if (n % 2 == 0)	cout << n << "\n";				// calculate the modulo (check if number is even)
